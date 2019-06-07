@@ -34,15 +34,15 @@
 								<th>Aksi</th>                  
 							</tr>
 						</thead>
-
+<?php foreach($guru as $gr) : ?>
 						<tbody>
 
 							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
+								<td><?php echo $gr->ID_GURU ?></td>
+								<td><?php echo $gr->NAMA_GURU ?></td>
+								<td><?php echo $gr->TGL_LAHIR_GURU ?></td>
+								<td><?php echo $gr->NO_HP_GURU ?></td>
+								<td><?php echo $gr->EMAIL_GURU ?></td>
 								<td>
 									<a href="" class="btn btn-info" >Ubah</a>
 									<a href="" class="btn btn-danger" >Hapus</a>
@@ -52,6 +52,7 @@
 							</tr>
 
 						</tbody>
+					<?php endforeach; ?>
 					</table>
 				</div>
 			</div>

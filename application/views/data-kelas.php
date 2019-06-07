@@ -26,16 +26,17 @@
 							<th>Nama Kelas</th>                     
 						</tr>
 					</thead>
+					<?php foreach($kelas as $kls) : ?>
+						<tbody>
+							
+							<tr>
+								<td><?php echo $kls->ID_KELAS ?></td>
+								<td><?php echo $kls->NAMA_KELAS ?></td>
 
-					<tbody>
-						
-						<tr>
-							<td></td>
-							<td></td>
+							</tr>
 
-						</tr>
-
-					</tbody>
+						</tbody>
+					<?php endforeach; ?>
 				</table>
 			</div>
 		</div>

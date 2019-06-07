@@ -32,20 +32,21 @@
 
 							</tr>
 						</thead>
+						<?php foreach($mapel as $mpl) : ?>
+							<tbody>
+								
+								<tr>
+									<td><?php echo $mpl->KD_MAPEL ?></td>
+									<td><?php echo $mpl->MAPEL ?></td>
+									<td>
+										<a href="" class="btn btn-info" >Ubah</a>
+										<a href="" class="btn btn-danger" >Hapus</a>
+									</td>
 
-						<tbody>
-							
-							<tr>
-								<td></td>
-								<td></td>
-								<td>
-									<a href="" class="btn btn-info" >Ubah</a>
-									<a href="" class="btn btn-danger" >Hapus</a>
-								</td>
+								</tr>
 
-							</tr>
-
-						</tbody>
+							</tbody>
+						<?php endforeach ; ?>
 					</table>
 				</div>
 			</div>

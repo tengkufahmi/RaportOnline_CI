@@ -4,6 +4,7 @@ class Kelas extends CI_Controller{
  
 	function __construct(){
 		parent::__construct();
+		$this->load->model("m_kelas");
 	
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("login"));
@@ -11,6 +12,7 @@ class Kelas extends CI_Controller{
 	}
  
 	function index(){
-		$this->load->view('data-kelas');
+		$data["kelas"] = $this->m_kelas->getAll();
+		$this->load->view('data-kelas', $data);
 	}
 }

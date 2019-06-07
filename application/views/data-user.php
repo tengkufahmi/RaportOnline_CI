@@ -35,14 +35,14 @@
 									<th>Aksi</th>                   
 								</tr>
 							</thead>
-
+<?php foreach($user as $us) : ?>
 							<tbody>
 
 								<tr>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
+									<td><?php echo $us->ID_USER ?></td>
+									<td><?php echo $us->USERNAME ?></td>
+									<td><?php echo $us->PASSWORD ?></td>
+									<td><?php echo $us->AKSES ?></td>
 									<td>
 										<a href="" class="btn btn-info" >Ubah</a>
 										<a href="" class="btn btn-danger" >Hapus</a>
@@ -51,6 +51,7 @@
 								</tr>
 								         
 						</tbody>
+					<?php endforeach ;?>
 					</table>
 				</div>
 			</div>
