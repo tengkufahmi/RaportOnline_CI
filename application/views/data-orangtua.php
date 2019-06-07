@@ -32,17 +32,17 @@
 							<th>Aksi</th>
 						</tr>
 					</thead>
-
+		<?php foreach($orangtua as $ortu) : ?>
 					<tbody>
 
 						<tr>
 
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
+							<td><?php echo $ortu->NO_INDUK ?></td>
+							<td><?php echo $ortu->NAMA_SISWA ?></td>
+							<td><?php echo $ortu->NAMA_AYAH ?></td>
+							<td><?php echo $ortu->NAMA_IBU ?></td>
+							<td><?php echo $ortu->NAMA_WALI ?></td>
+							<td><?php echo $ortu->NO_HP_ORTU ?></td>
 							<td>
 								<a href="" class="btn btn-info" >Ubah</a>
 								<a href="" class="btn btn-danger" >Hapus</a>
@@ -50,6 +50,7 @@
 						</tr>
 						       
 				</tbody>
+			<?php endforeach; ?>
 			</table>
 		</div>
 	</div>
