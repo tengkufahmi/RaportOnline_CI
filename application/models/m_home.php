@@ -9,6 +9,23 @@ class m_home extends CI_Model
     public $isi;
     public $time;   
 
+    /*public function rules()
+    {
+        return [
+            ['field' => 'judul',
+            'label' => 'Judul',
+            'rules' => 'required'],
+
+            ['field' => 'isi',
+            'label' => 'Isi',
+            'rules' => 'required'],
+
+            ['field' => 'time',
+            'label' => 'Waktu',
+            'rules' => 'required']
+        ];
+    }*/
+
     public function getAll()
     {
         return $this->db->get($this->_table)->result();

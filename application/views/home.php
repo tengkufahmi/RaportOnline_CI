@@ -21,7 +21,7 @@
 			<a href="">
 				<button name="tambah" type="button" class="btn btn-primary col-xs-3 float-right">Tambah Pengumuman</button></a>
 				<div class="table-responsive mt-5">
-					<?php foreach ($pengumuman as $info) :?>
+					
 					<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 						<thead>
 							<tr>
@@ -31,24 +31,25 @@
 								<th>Aksi</th>                  
 							</tr>
 						</thead>
+						<?php foreach ($pengumuman as $info) :?>
+							<tbody>
 
-						<tbody>
-
-							<tr>
-								<td><?php echo $info->judul ?></td>
-								<td><?php echo $info->isi ?></td>
-								<td><?php echo $info->time ?></td>
-								<td>
-									<a href="" class="btn btn-info" >Ubah</a>
-									<a href="" class="btn btn-danger" >Hapus</a>
-								</td>
+								<tr>
+									<td><?php echo $info->JUDUL ?></td>
+									<td><?php echo $info->ISI ?></td>
+									<td><?php echo $info->TIME ?></td>
+									<td>
+										<a href="" class="btn btn-info" >Ubah</a>
+										<a href="" class="btn btn-danger" >Hapus</a>
+									</td>
 
 
-							</tr>
+								</tr>
 
-						</tbody>
+							</tbody>
+						<?php endforeach;?>
 					</table>
-				<?php endforeach;?>
+
 				</div>
 			</div>
 			<div class="card-footer small text-muted">
