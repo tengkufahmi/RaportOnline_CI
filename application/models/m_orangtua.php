@@ -18,9 +18,7 @@ class m_orangtua extends CI_Model
 
     public function get_by_role()
   {
-      $this->db->select('
-          orang_tua.*, siswa.ID_ORTU AS ID_ORTU, siswa.NAMA_SISWA, siswa.NO_INDUK
-      ');
+      $this->db->select('*');
       $this->db->join('siswa', 'orang_tua.ID_ORTU = siswa.ID_ORTU');
       $this->db->from('orang_tua');
       $query = $this->db->get();
