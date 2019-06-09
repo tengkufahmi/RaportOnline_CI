@@ -20,12 +20,14 @@
 			Data Santri
 		</div>
 		<div class="container mt-3">
+			
 			PILIH KELAS : <select class="custom-select mb-2 w-25" name="kelas" onchange="showUser(this.value)">
 				<option>-- Kelas --</option>
-
-				<option value=""></option>
-				
+				<?php foreach( $kelas as $kls) :?>
+					<option value="<?php echo $kls->ID_KELAS ?>"><?php echo $kls->NAMA_KELAS ?></option>
+				<?php endforeach; ?>
 			</select>
+
 			<a href="input_datasiswa">
 				<button name="tambah" type="button" class="btn btn-primary col-md-2 col-xs-12 float-right mr-5">+ Tambah Data</button></a>
 			</div>              
@@ -76,22 +78,42 @@
 									<a href="" class="btn btn-danger" >Hapus</a>
 								</td>
 							</tr>
-							            
-					</tbody>
-				<?php endforeach; ?>
-			</table>
 
+						</tbody>
+					<?php endforeach; ?>
+				</table>
+
+			</div>
+		</div>
+		<div class="card-footer small text-muted">
 		</div>
 	</div>
-	<div class="card-footer small text-muted">
-	</div>
-</div>
 
-<p class="small text-center text-muted my-5">
-	<em></em>
-</p>
+	<p class="small text-center text-muted my-5">
+		<em></em>
+	</p>
 
 </div>
+<script>
+      function showUser(str) {
+        if (str=="") {
+          document.getElementById("txtHint").innerHTML="";
+          return;
+        }
+        if (window.XMLHttpRequest) {
+          xmlhttp=new XMLHttpRequest();
+        } else { 
+          xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange=function() {
+          if (this.readyState==4 && this.status==200) {
+            document.getElementById("txtHint").innerHTML=this.responseText;
+          }
+        }
+        xmlhttp.open("GET","<?php echo site_url('Santri/GetDataKelas') ?>?kelas="+str,true);
+        xmlhttp.send();
+      }
+    </script>
 
 <?php $this->load->view("partial/foot.php") ?>
 </html>

@@ -13,6 +13,15 @@ class Santri extends CI_Controller{
  
 	function index(){
 		$data["santri"] = $this->m_santri->get_by_role();
+		$data["kelas"] = $this->m_santri->getKelas();
 		$this->load->view('data-santri', $data);
 	}
+
+	function getDataKelas(){
+		$id = $_GET['kelas'];
+		$data["santri"] = $this->m_santri->get_by_class($id);
+		$this->load->view('table-santri', $data);
+	}
+
+	
 }
