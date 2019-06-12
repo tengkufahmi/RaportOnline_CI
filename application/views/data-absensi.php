@@ -47,18 +47,51 @@
 			
 			<div class="card-body">
 				<div class="table-responsive" id="txtHint">
-					
-				</div>
+					<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+						<thead>
+							<tr>
+
+								<th>Nama Santri</th>                          
+								<th>Subuh</th>
+								<th>Maghrib</th>
+								<th>Isyak</th>
+								<th>Tanggal</th>
+								<th>Semester</th>                          
+								<th>Tahun Ajaran</th>
+								<th>Aksi</th>
+							</tr>
+						</thead>
+
+						<tbody>
+	<?php foreach($absensi as $a) : ?>
+							<tr>
+								<td><?php echo $a->NAMA_SISWA?></td>
+								<td><?php echo $a->SUBUH?></td>
+								<td><?php echo $a->MAGHRIB?></td>
+								<td><?php echo $a->ISYAK?></td>
+								<td><?php echo $a->TANGGAL?></td>
+								<td><?php echo $a->SEMESTER?></td>
+								<td><?php echo $a->THN_AJARAN?></td>
+								<td>
+									<a href="" class="btn btn-info">Ubah</a>
+									<a href="" class="btn btn-danger" >Hapus</a>
+								</td>
+							</tr>
+<?php endforeach; ?>
+					</tbody>
+				</table>
+
 			</div>
-
-			<div class="card-footer small text-muted">
-			</div>
-
-			<p class="small text-center text-muted my-5">
-				<em></em>
-			</p>
-
 		</div>
 
-		<?php $this->load->view("partial/foot.php") ?>
-		</html>
+		<div class="card-footer small text-muted">
+		</div>
+
+		<p class="small text-center text-muted my-5">
+			<em></em>
+		</p>
+
+	</div>
+
+	<?php $this->load->view("partial/foot.php") ?>
+	</html>

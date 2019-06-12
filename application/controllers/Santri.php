@@ -18,7 +18,7 @@ class Santri extends CI_Controller{
 	}
 
 	function getDataKelas(){
-		$id = $_GET['kelas'];
+		$id = $this->input->get('kelas');
 		$data["santri"] = $this->m_santri->get_by_class($id);
 		$this->load->view('table-santri', $data);
 	}

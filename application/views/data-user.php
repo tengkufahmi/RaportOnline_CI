@@ -35,34 +35,34 @@
 									<th>Aksi</th>                   
 								</tr>
 							</thead>
-<?php foreach($user as $us) : ?>
-							<tbody>
+							<?php foreach($user as $us) : ?>
+								<tbody>
 
-								<tr>
-									<td><?php echo $us->ID_USER ?></td>
-									<td><?php echo $us->USERNAME ?></td>
-									<td><?php echo $us->PASSWORD ?></td>
-									<td><?php echo $us->AKSES ?></td>
-									<td>
-										<a href="" class="btn btn-info" >Ubah</a>
-										<a href="" class="btn btn-danger" >Hapus</a>
-									</td>
+									<tr>
+										<td><?php echo $us->ID_USER ?></td>
+										<td><?php echo $us->USERNAME ?></td>
+										<td><?php echo $us->PASSWORD ?></td>
+										<td><?php echo $us->AKSES ?></td>
+										<td>
+											<a href="" class="btn btn-info" >Ubah</a>
+											<a href="" class="btn btn-danger" >Hapus</a>
+										</td>
 
-								</tr>
-								         
-						</tbody>
-					<?php endforeach ;?>
-					</table>
+									</tr>
+									
+								</tbody>
+							<?php endforeach ;?>
+						</table>
+					</div>
 				</div>
+				<div class="card-footer small text-muted"></div>
 			</div>
-			<div class="card-footer small text-muted"></div>
+
+			<p class="small text-center text-muted my-5">
+				<em></em>
+			</p>
+
 		</div>
 
-		<p class="small text-center text-muted my-5">
-			<em></em>
-		</p>
-
-	</div>
-
-	<?php $this->load->view("partial/foot.php") ?>
-	</html>
+		<?php $this->load->view("partial/foot.php") ?>
+		</html>
