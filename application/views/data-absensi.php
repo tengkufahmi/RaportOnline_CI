@@ -39,7 +39,7 @@
 					<input type = "button" onclick = "ajaxFunction()" class="btn btn-secondary mt-4" value ="Filter"/>
 				</div>
 				<div class="col-md-3">
-					<a href="input_absen_banyak">
+					<a href="New/Absensi">
 						<button name="tambah" type="button" class="btn btn-primary float-right mr-3 mt-4">+ Tambah Data</button></a>
 					</div>
 				</div>                  

@@ -18,11 +18,11 @@
 			<i class="fas fa-table"></i>
 		Data User</div>
 		<div class="container mt-3">                                
-			<a href="input_user">
+			<a href="New/User">
 				<button name="tambah" type="button" class="btn btn-primary col-md-2 col-xs-12 float-right mr-5">+ Tambah User</button></a>
-				<a href="input_admin">
-					<button name="tambah" type="button" class="btn btn-primary col-md-2 col-xs-12 float-right mr-5">+ Tambah Admin</button></a>
-				</div>
+			<a href="New/Admin">
+				<button name="tambah" type="button" class="btn btn-primary col-md-2 col-xs-12 float-right mr-5">+ Tambah Admin</button></a>
+		</div>
 				<div class="card-body">
 					<div class="table-responsive">
 						<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

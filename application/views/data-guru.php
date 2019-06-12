@@ -18,7 +18,7 @@
 			<i class="fas fa-table"></i>
 		Data Guru</div>
 		<div class="container mt-3">                
-			<a href="">
+			<a href="New/Guru">
 				<button name="tambah" type="button" class="btn btn-primary col-md-2 col-xs-12 float-right mr-5">+ Tambah Data</button></a>
 			</div>
 			<div class="card-body">

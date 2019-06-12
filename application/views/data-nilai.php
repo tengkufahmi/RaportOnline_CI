@@ -53,7 +53,7 @@
 				
 				<div class="col-md-6">
 					<div class="form-group">
-						<a href="">
+						<a href="New/Nilai">
 							<button name="tambah" type="button" class="btn btn-primary  float-right mr-5 mt-5">+ Tambah Data</button></a>
 						</div>
 					</div>
