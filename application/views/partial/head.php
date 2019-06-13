@@ -27,7 +27,7 @@
 
   <nav class="navbar navbar-expand navbar-dark bg-success static-top">
 
-    <a class="navbar-brand mr-1" href="Home">PPM Syafi'ur Rohman</a>
+    <a class="navbar-brand mr-1" href="<?php echo base_url('Home')?>">PPM Syafi'ur Rohman</a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       <i class="fas fa-bars"></i>
@@ -60,7 +60,7 @@
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="Home">
+        <a class="nav-link" href="<?php echo base_url('Home')?>">
           <i class="fas fa-fw fa-home"></i>
           <span>Home</span>
         </a>
@@ -71,25 +71,25 @@
           <span>View Data</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">         
-          <a class="dropdown-item" href="Santri">Data Santri</a>
-          <a class="dropdown-item" href="Orangtua">Data OrangTua</a>
-          <a class="dropdown-item" href="User">Data User</a>
+          <a class="dropdown-item" href="<?php echo base_url('Santri')?>">Data Santri</a>
+          <a class="dropdown-item" href="<?php echo base_url('Orangtua')?>">Data OrangTua</a>
+          <a class="dropdown-item" href="<?php echo base_url('User')?>">Data User</a>
 
-          <a class="dropdown-item" href="Kelas">Data Kelas</a>
+          <a class="dropdown-item" href="<?php echo base_url('Kelas')?>">Data Kelas</a>
 
-          <a class="dropdown-item" href="Mapel">Data Mapel</a>
-          <a class="dropdown-item" href="Guru">Data Guru</a>
+          <a class="dropdown-item" href="<?php echo base_url('Mapel')?>">Data Mapel</a>
+          <a class="dropdown-item" href="<?php echo base_url('Guru')?>">Data Guru</a>
 
 
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="Nilai">
+        <a class="nav-link" href="<?php echo base_url('Nilai')?>">
           <i class="fas fa-fw fa-book"></i>
           <span>Nilai</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Absensi">
+          <a class="nav-link" href="<?php echo base_url('Absensi')?>">
             <i class="fas fa-fw fa-book-open"></i>
             <span>Absensi</span></a>
           </li>
