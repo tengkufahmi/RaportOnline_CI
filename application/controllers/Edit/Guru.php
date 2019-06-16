@@ -1,6 +1,6 @@
 <?php
 
-class Edit_guru extends CI_Controller{
+class Guru extends CI_Controller{
  
 	function __construct(){
 		parent::__construct();

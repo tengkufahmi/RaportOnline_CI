@@ -1,6 +1,6 @@
 <?php
 
-class Edit_nilai extends CI_Controller{
+class Nilai extends CI_Controller{
 
 	function __construct(){
 		parent::__construct();

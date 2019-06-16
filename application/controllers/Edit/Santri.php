@@ -1,6 +1,6 @@
 <?php
 
-class Edit_santri extends CI_Controller{
+class Santri extends CI_Controller{
  
 	function __construct(){
 		parent::__construct();		
