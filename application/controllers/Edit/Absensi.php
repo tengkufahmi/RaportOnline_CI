@@ -1,6 +1,6 @@
 <?php
 
-class Edit_absensi extends CI_Controller{
+class Absensi extends CI_Controller{
  
 	function __construct(){
 		parent::__construct();		
@@ -14,5 +14,13 @@ class Edit_absensi extends CI_Controller{
 	function index(){
 		$data["absensi"] = $this->m_absensi->get_by_role();
 		$this->load->view('edit-absensi', $data);
+	}
+
+	function update()
+	{
+		$info = $this->m_absensi;
+		$info->save();
+		echo "<script>alert('Data berhasil disimpan.')</script>";	
+		redirect(base_url('Absensi'));
 	}
 }

@@ -30,6 +30,7 @@
               </div>
 
               <div class="card-footer small text-mutedtext-center">
+                <a href="Edit/Mapel">
                 <?php 
                 if(isset($_GET['ubah'])){
                  echo "<button type='submit' name='ubah' class='btn btn-warning col-md-2 col-xs-12'>Ubah</button>";

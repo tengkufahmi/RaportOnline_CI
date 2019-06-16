@@ -1,6 +1,6 @@
 <?php
 
-class Edit_nilai extends CI_Controller{
+class Nilai extends CI_Controller{
 
 	function __construct(){
 		parent::__construct();
@@ -14,4 +14,11 @@ class Edit_nilai extends CI_Controller{
 		$this->load->view('edit-nilai');
 	}
 
+	function update()
+	{
+		$info = $this->m_nilai;
+		$info->save();
+		echo "<script>alert('Data berhasil disimpan.')</script>";	
+		redirect(base_url('Nilai'));
+	}
 }

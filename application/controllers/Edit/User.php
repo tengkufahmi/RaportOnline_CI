@@ -1,6 +1,6 @@
 <?php
 
-class Edit_user extends CI_Controller{
+class User extends CI_Controller{
  
 	function __construct(){
 		parent::__construct();
@@ -12,5 +12,13 @@ class Edit_user extends CI_Controller{
  
 	function index(){
 		$this->load->view('edit-user');
+	}
+
+	function update()
+	{
+		$info = $this->m_user;
+		$info->save();
+		echo "<script>alert('Data berhasil disimpan.')</script>";	
+		redirect(base_url('User'));
 	}
 }

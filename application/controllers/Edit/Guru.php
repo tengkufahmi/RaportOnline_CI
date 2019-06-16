@@ -1,6 +1,6 @@
 <?php
 
-class Edit_guru extends CI_Controller{
+class Guru extends CI_Controller{
  
 	function __construct(){
 		parent::__construct();
@@ -14,5 +14,13 @@ class Edit_guru extends CI_Controller{
 	function index(){
 		$data["guru"] = $this->m_guru->getAll();
 		$this->load->view('edit-guru', $data);
+	}
+
+	function update()
+	{
+		$info = $this->m_guru;
+		$info->save();
+		echo "<script>alert('Data berhasil disimpan.')</script>";	
+		redirect(base_url('Guru'));
 	}
 }
