@@ -11,7 +11,7 @@
 		</li>
 		<li class="breadcrumb-item active">Tables</li>
 	</ol>
-	<form method="POST" action="input_datasiswa2" enctype="multipart/form-data" class="col-md-12">
+	<form method="POST" action="Santri/add" enctype="multipart/form-data" class="col-md-12">
 		<div class="row">
 			<div class="col-md-4">
 				<div class="form-group">
@@ -81,24 +81,20 @@
 				<div class="form-group">
 					<label for="Kelas">Kelas</label>
 					<select class="form-control" name="kelas">                      
-						<option>-Pilih Kelas-</option>
-
-						<option value=""></option>
+						<option>-- Kelas --</option>
+						<?php foreach( $kelas as $kls) :?>
+							<option value="<?php echo $kls->ID_KELAS ?>"><?php echo $kls->NAMA_KELAS ?></option>
+						<?php endforeach; ?>
 
 					</select>
-				</div>
+				</div>				
 				<div class="form-group">
-					<label for="Akses User">Akses User</label>
-					<select class="form-control" name="user">                      
-						<option>-Pilih User-</option>
-						<option value=""></option>         
-					</select>
-				</div>
-				<div class="form-group">
-					<label for="Wali Kelas">Wali Kelas</label>
+					<label for="Wali Kelas">Wali Santri</label>
 					<select class="form-control" name="walik">                      
-						<option>-Wali Murid-</option>
-						<option value=""></option>            
+						<option>-Wali Santri-</option>
+						<?php foreach( $wali_santri as $row) :?>
+						<option value="<?php echo $row->ID_GURU ?>"><?php echo $row->NAMA_GURU ?></option>
+						<?php endforeach; ?>       
 					</select>
 				</div>                 
 			</div>

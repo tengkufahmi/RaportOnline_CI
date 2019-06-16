@@ -61,17 +61,16 @@ class m_user extends CI_Model
 		$this->db->where('no_induk', $username);
 		$update_santri = $this->db->update('siswa');
 
-		$this->db->select('orang_tua.id_ortu as idnya');
+		$this->db->select('orang_tua.id_ortu as getid');
 		$this->db->from('siswa');
 		$this->db->join('orang_tua', 'orang_tua.ID_ORTU = siswa.ID_ORTU');
 		$this->db->where('no_induk', $username);
-		$id_wali = $this->db->get();
-		$id = $id_wali->result_array();
+		$id_wali = $this->db->get()->row()->getid;
+		//$id = $id_wali->result();
 
 		$this->db->set('user_ortu', $idwali);
-		$this->db->where('id_ortu', $id);
-		$update_wali = $this->db->update('orangtua');
-				
+		$this->db->where('id_ortu', $id_wali);
+		$update_wali = $this->db->update('orang_tua');				
 	}
 
 

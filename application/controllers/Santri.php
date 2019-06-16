@@ -24,4 +24,6 @@ class Santri extends CI_Controller{
 	}
 
 	
+
+	
 }

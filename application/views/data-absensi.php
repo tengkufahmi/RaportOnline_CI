@@ -36,7 +36,7 @@
 					</div>
 				</div>
 				<div class="col-md-3">
-					<input type = "button" onclick = "ajaxFunction()" class="btn btn-secondary mt-4" value ="Filter"/>
+					<input type = "button" onclick = "ajaxFunction()" class="btn btn-secondary mt-4" value ="					Filter"/>
 				</div>
 				<div class="col-md-3">
 					<a href="New/Absensi">
@@ -63,35 +63,35 @@
 						</thead>
 
 						<tbody>
-	<?php foreach($absensi as $a) : ?>
-							<tr>
-								<td><?php echo $a->NAMA_SISWA?></td>
-								<td><?php echo $a->SUBUH?></td>
-								<td><?php echo $a->MAGHRIB?></td>
-								<td><?php echo $a->ISYAK?></td>
-								<td><?php echo $a->TANGGAL?></td>
-								<td><?php echo $a->SEMESTER?></td>
-								<td><?php echo $a->THN_AJARAN?></td>
-								<td>
-									<a href="" class="btn btn-info">Ubah</a>
-									<a href="" class="btn btn-danger" >Hapus</a>
-								</td>
-							</tr>
-<?php endforeach; ?>
-					</tbody>
-				</table>
+							<?php foreach($absensi as $a) : ?>
+								<tr>
+									<td><?php echo $a->NAMA_SISWA?></td>
+									<td><?php echo $a->SUBUH?></td>
+									<td><?php echo $a->MAGHRIB?></td>
+									<td><?php echo $a->ISYAK?></td>
+									<td><?php echo $a->TANGGAL?></td>
+									<td><?php echo $a->SEMESTER?></td>
+									<td><?php echo $a->THN_AJARAN?></td>
+									<td>
+										<a href="" class="btn btn-info">Ubah</a>
+										<a href="" class="btn btn-danger" >Hapus</a>
+									</td>
+								</tr>
+							<?php endforeach; ?>
+						</tbody>
+					</table>
 
+				</div>
 			</div>
+
+			<div class="card-footer small text-muted">
+			</div>
+
+			<p class="small text-center text-muted my-5">
+				<em></em>
+			</p>
+
 		</div>
 
-		<div class="card-footer small text-muted">
-		</div>
-
-		<p class="small text-center text-muted my-5">
-			<em></em>
-		</p>
-
-	</div>
-
-	<?php $this->load->view("partial/foot.php") ?>
-	</html>
+		<?php $this->load->view("partial/foot.php") ?>
+		</html>
