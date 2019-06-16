@@ -1,6 +1,6 @@
 <?php
 
-class Edit_mapel extends CI_Controller{
+class Mapel extends CI_Controller{
  
 	function __construct(){
 		parent::__construct();

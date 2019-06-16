@@ -74,7 +74,7 @@
 								<td><?php echo $santri->ANGKATAN ?></td>
 								<td><?php echo $santri->STATUS ?></td>
 								<td>
-									<a href="" class="btn btn-info" >Ubah</a>
+									<a href="<?php echo base_url('Edit/Santri') ?>" class="btn btn-info" >Ubah</a>
 									<a href="" class="btn btn-danger" >Hapus</a>
 								</td>
 							</tr>

@@ -44,7 +44,7 @@
 							<td><?php echo $ortu->NAMA_WALI ?></td>
 							<td><?php echo $ortu->NO_HP_ORTU ?></td>
 							<td>
-								<a href="" class="btn btn-info" >Ubah</a>
+								<a href="<?php echo base_url('Edit/Orang') ?>" class="btn btn-info" >Ubah</a>
 								<a href="" class="btn btn-danger" >Hapus</a>
 							</td>
 						</tr>

@@ -86,7 +86,7 @@
 									<td><?php echo $n->SEMESTER?></td>
 									<td><?php echo $n->THN_AJAR?></td>
 									<td>
-										<a href="" class="btn btn-info" >Ubah</a>
+										<a href="<?php echo base_url('Edit/Nilai') ?>" class="btn btn-info" >Ubah</a>
 										<a href="" class="btn btn-danger" >Hapus</a>
 									</td>
 
