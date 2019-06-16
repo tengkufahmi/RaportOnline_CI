@@ -1,10 +1,10 @@
 <?php
 
-class Admin extends CI_Controller{
+class Info extends CI_Controller{
  
 	function __construct(){
-		parent::__construct();
-		$this->load->model("m_user");
+		parent::__construct();		
+		$this->load->model("m_home");
 	
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("login"));
@@ -12,14 +12,15 @@ class Admin extends CI_Controller{
 	}
  
 	function index(){
-		$this->load->view('new/admin');
+		$this->load->view('new/info');
 	}
 
 	function add()
 	{
-		$info = $this->m_user;
-		$info->saveAdmin();
+		$info = $this->m_home;
+		$info->save();
 		echo "<script>alert('Data berhasil disimpan.')</script>";	
-		redirect(base_url('User'));
+		redirect(base_url('Home'));
 	}
+
 }

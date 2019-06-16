@@ -36,5 +36,13 @@ class m_home extends CI_Model
         return $this->db->get_where($this->_table, ["id_pengumuman" => $id])->row();
     }
 
+    public function save()
+    {
+        $post = $this->input->post();
+        $this->judul = $post["judul"];
+        $this->isi = $post["isi"];
+        $this->time = date("Y-m-d H:i:s");
+        $this->db->insert($this->_table, $this);
+    }
     
 }

@@ -18,7 +18,7 @@
 			<i class="fas fa-home"></i>
 		HALAMAN ADMIN</div>
 		<div class="card-body">
-			<a href="">
+			<a href="New/Info">
 				<button name="tambah" type="button" class="btn btn-primary col-xs-3 float-right">Tambah Pengumuman</button></a>
 				<div class="table-responsive mt-5">
 					

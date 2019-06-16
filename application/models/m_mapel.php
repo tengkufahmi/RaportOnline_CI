@@ -11,5 +11,13 @@ class m_mapel extends CI_Model
     return $query->result();
   }
 
+  public function save()
+	{
+		$post = $this->input->post();
+		$this->kd_mapel = $post["kode"];
+		$this->mapel = $post["nama"];
+		$this->db->insert('mapel', $this);
+	}
+
 
 }

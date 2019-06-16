@@ -11,7 +11,7 @@
               </li>
               <li class="breadcrumb-item active">Tables</li>
             </ol>
-            <form method="POST" action="input_mapel2" enctype="multipart/form-data" class="col-md-12">
+            <form method="POST" action="Mapel/add" enctype="multipart/form-data" class="col-md-12">
               <div class="row">
                 <div class="col-md-4">
                   <div class="form-group">

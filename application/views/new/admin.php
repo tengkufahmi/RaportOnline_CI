@@ -11,7 +11,7 @@
 		</li>
 		<li class="breadcrumb-item active">Tambah Admin</li>
 	</ol>
-	<form method="POST" action="input_admin2" enctype="multipart/form-data" class="col-md-12">
+	<form method="POST" action="Admin/add" enctype="multipart/form-data" class="col-md-12">
 		<div class="row">
 			<div class="col-md-5">                 
 				<div class="form-group">
