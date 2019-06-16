@@ -15,4 +15,12 @@ class Kelas extends CI_Controller{
 		$data["kelas"] = $this->m_kelas->getAll();
 		$this->load->view('edit-kelas', $data);
 	}
+
+	function update()
+	{
+		$info = $this->m_kelas;
+		$info->save();
+		echo "<script>alert('Data berhasil disimpan.')</script>";	
+		redirect(base_url('Kelas'));
+	}
 }

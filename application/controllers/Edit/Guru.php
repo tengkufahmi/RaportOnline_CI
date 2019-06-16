@@ -15,4 +15,12 @@ class Guru extends CI_Controller{
 		$data["guru"] = $this->m_guru->getAll();
 		$this->load->view('edit-guru', $data);
 	}
+
+	function update()
+	{
+		$info = $this->m_guru;
+		$info->save();
+		echo "<script>alert('Data berhasil disimpan.')</script>";	
+		redirect(base_url('Guru'));
+	}
 }

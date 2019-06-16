@@ -15,4 +15,12 @@ class Absensi extends CI_Controller{
 		$data["absensi"] = $this->m_absensi->get_by_role();
 		$this->load->view('edit-absensi', $data);
 	}
+
+	function update()
+	{
+		$info = $this->m_absensi;
+		$info->save();
+		echo "<script>alert('Data berhasil disimpan.')</script>";	
+		redirect(base_url('Absensi'));
+	}
 }

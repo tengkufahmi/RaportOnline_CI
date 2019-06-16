@@ -13,4 +13,12 @@ class User extends CI_Controller{
 	function index(){
 		$this->load->view('edit-user');
 	}
+
+	function update()
+	{
+		$info = $this->m_user;
+		$info->save();
+		echo "<script>alert('Data berhasil disimpan.')</script>";	
+		redirect(base_url('User'));
+	}
 }

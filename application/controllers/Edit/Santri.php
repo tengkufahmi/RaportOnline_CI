@@ -13,5 +13,12 @@ class Santri extends CI_Controller{
 	function index(){		
 		$this->load->view('edit-santri');
 	}
-	
+
+	function update()
+	{
+		$info = $this->m_Santri;
+		$info->save();
+		echo "<script>alert('Data berhasil disimpan.')</script>";	
+		redirect(base_url('Santri'));
+	}
 }
