@@ -15,4 +15,13 @@ class Guru extends CI_Controller{
 		$data["guru"] = $this->m_guru->getAll();
 		$this->load->view('data-guru', $data);
 	}
+
+	public function delete($id=null)
+	{
+		if (!isset($id)) show_404();
+
+		if ($this->m_guru->delete($id)) {
+			redirect(site_url('Guru'));
+		}
+	}
 }

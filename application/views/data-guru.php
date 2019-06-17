@@ -45,7 +45,7 @@
 								<td><?php echo $gr->EMAIL_GURU ?></td>
 								<td>
 									<a href="<?php echo base_url('Edit/Guru') ?>" class="btn btn-info" >Ubah</a>
-									<a href="" class="btn btn-danger" >Hapus</a>
+									<a onclick="return confirm ('Data Akan dihapus?')" href="<?php echo site_url('Guru/delete/'.$gr->ID_GURU) ?>" class="btn btn-danger" >Hapus</a>
 								</td>
 
 
