@@ -74,7 +74,7 @@
 									<td><?php echo $a->THN_AJARAN?></td>
 									<td>
 										<a href="" class="btn btn-info">Ubah</a>
-										<a href="" class="btn btn-danger" >Hapus</a>
+										<a onclick="return confirm ('Data Akan dihapus?')" href="<?php echo site_url('Absensi/delete/'.$a->ID_ABSEN) ?>" class="btn btn-danger" >Hapus</a>
 									</td>
 								</tr>
 							<?php endforeach; ?>

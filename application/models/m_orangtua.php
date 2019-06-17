@@ -39,5 +39,8 @@ class m_orangtua extends CI_Model
     $this->db->update($table, $data);
   }
 
-  
+  public function delete($id)
+  {
+   return $this->db->delete('orang_tua', array("id_ortu" => $id));
+ }
 }

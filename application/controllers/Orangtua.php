@@ -15,4 +15,13 @@ class Orangtua extends CI_Controller{
 		$data["orangtua"] = $this->m_orangtua->get_by_role();
 		$this->load->view('data-orangtua', $data);
 	}
+
+	public function delete($id=null)
+	{
+		if (!isset($id)) show_404();
+
+		if ($this->m_orangtua->delete($id)) {
+			redirect(site_url('Orangtua'));
+		}
+	}
 }

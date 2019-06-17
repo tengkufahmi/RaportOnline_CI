@@ -80,6 +80,10 @@ class m_user extends CI_Model
 	public function update_data($where, $data, $table){
 		$this->db->where($where);
 		$this->db->update($table, $data);
+	public function delete($id)
+	{
+		return $this->db->delete('user', array("id_user" => $id));
+
 	}
 
 }

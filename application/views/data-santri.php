@@ -76,6 +76,8 @@
 								<td>
 									<a href="<?php echo base_url('Edit/Santri/edit/'.$santri->NO_INDUK) ?>" class="btn btn-info" >Ubah</a>
 									<a href="" class="btn btn-danger" >Hapus</a>
+									<a href="<?php echo base_url('Edit/Santri') ?>" class="btn btn-info" >Ubah</a>
+								<a onclick="return confirm ('Data Akan dihapus?')" href="<?php echo site_url('Santri/delete/'.$santri->NO_INDUK) ?>" class="btn btn-danger" >Hapus</a>
 								</td>
 							</tr>
 

@@ -46,6 +46,8 @@
 										<td>
 											<a href="<?php echo base_url('Edit/User/edit/'.$us->ID_USER) ?>" class="btn btn-info" >Ubah</a>
 											<a href="" class="btn btn-danger" >Hapus</a>
+											<a href="<?php echo base_url('Edit/User') ?>" class="btn btn-info" >Ubah</a>
+											<a onclick="return confirm ('Data Akan dihapus?')" href="<?php echo site_url('User/delete/'.$us->ID_USER) ?>" class="btn btn-danger" >Hapus</a>
 										</td>
 
 									</tr>

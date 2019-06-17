@@ -29,4 +29,13 @@ class Nilai extends CI_Controller{
 		$this->load->view('table-nilai', $hasil);
 		$this->load->view('data-nilai', $data);
 	}
+
+	 function delete($id=null)
+	{
+		if (!isset($id)) show_404();
+
+		if ($this->m_nilai->delete($id)) {
+			redirect(site_url('Nilai'));
+		}
+  }
 }

@@ -31,6 +31,11 @@ class m_Absensi extends CI_Model
         return $this->db->get_where($this->_table, ["no_induk" => $id])->row();
     }
 
+    public function delete($id)
+    {
+       return $this->db->delete('absensi', array("id_absen" => $id));
+    }
+
     public function getSantri()
   {
     $this->db->select('*');

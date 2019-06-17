@@ -87,7 +87,7 @@
 									<td><?php echo $n->THN_AJAR?></td>
 									<td>
 										<a href="<?php echo base_url('Edit/Nilai') ?>" class="btn btn-info" >Ubah</a>
-										<a href="" class="btn btn-danger" >Hapus</a>
+										<a onclick="return confirm ('Data Akan dihapus?')" href="<?php echo site_url('Nilai/delete/'.$n->ID_NILAI) ?>" class="btn btn-danger" >Hapus</a>
 									</td>
 
 
