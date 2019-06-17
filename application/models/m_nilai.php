@@ -47,10 +47,28 @@ class m_Nilai extends CI_Model
 
   }
 
+  public function get_by_value($id)
+  {
+    $this->db->select('*');
+    $this->db->from('siswa');
+    $this->db->join('kelas', 'kelas.id_kelas = siswa.id_kelas');    
+    $query = $this->db->where('kelas.id_kelas ='.$id)->get();    
+    return $query->result();
+
+  }
+
   public function getKelas()
   {
     $this->db->select('*');
     $this->db->from('kelas');
+    $query = $this->db->get();
+    return $query->result();
+  }
+
+  public function getSantri()
+  {
+    $this->db->select('*');
+    $this->db->from('siswa');
     $query = $this->db->get();
     return $query->result();
   }
@@ -62,6 +80,31 @@ class m_Nilai extends CI_Model
     $query = $this->db->get();
     return $query->result();
   }
+
+  public function getGuru()
+  {
+    $this->db->select('*');
+    $this->db->from('guru');
+    $query = $this->db->get();
+    return $query->result();
+  }
+
+  public function saveNilai()
+  {
+    $post = $this->input->post();
+    $no = $post["no"];    
+    $array = count($no);
+    $nilai = $post["nilai"];
+    $guru = $post["guru"];
+    $mapel = $post["mapel"];
+    $tahun = $post["tahun"];
+    $semester = $post["semester"];    
+    for($i = 0; $i < $array; $i++){
+      $data_nilai = array('id_guru' => $guru, 'nilai.no_induk' => $no[$i], 'kd_mapel' => $mapel, 'nilai' => $nilai[$i], 'semester' => $semester, 'thn_ajar' => $tahun);
+      $this->db->insert('nilai', $data_nilai);
+    }    
+  }
+
 
 
 }

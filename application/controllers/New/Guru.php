@@ -19,7 +19,6 @@ class Guru extends CI_Controller{
 	{
 		$info = $this->m_guru;
 		$info->save();
-		var_dump($info); die;
 		echo "<script>alert('Data berhasil disimpan.')</script>";	
 		redirect(base_url('Guru'));
 	}

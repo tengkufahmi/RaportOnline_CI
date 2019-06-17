@@ -63,7 +63,6 @@
 						</thead>
 
 						<tbody>
-<<<<<<< HEAD
 							<?php foreach($absensi as $a) : ?>
 								<tr>
 									<td><?php echo $a->NAMA_SISWA?></td>
@@ -81,41 +80,18 @@
 							<?php endforeach; ?>
 						</tbody>
 					</table>
-=======
-	<?php foreach($absensi as $a) : ?>
-							<tr>
-								<td><?php echo $a->NAMA_SISWA?></td>
-								<td><?php echo $a->SUBUH?></td>
-								<td><?php echo $a->MAGHRIB?></td>
-								<td><?php echo $a->ISYAK?></td>
-								<td><?php echo $a->TANGGAL?></td>
-								<td><?php echo $a->SEMESTER?></td>
-								<td><?php echo $a->THN_AJARAN?></td>
-								<td>
-									<a href="<?php echo base_url('Edit/Absensi') ?>" class="btn btn-info" >Ubah</a>
-									<a href="" class="btn btn-danger" >Hapus</a>
-								</td>
-							</tr>
-<?php endforeach; ?>
-					</tbody>
-				</table>
->>>>>>> 62a0401cc6dfa783b5fac0b788b6ffb19eae5624
-
 				</div>
 			</div>
 
 			<div class="card-footer small text-muted">
 			</div>
 
-<<<<<<< HEAD
 			<p class="small text-center text-muted my-5">
 				<em></em>
 			</p>
-=======
 		<p class="small text-center text-muted my-5">
 			<em></em> 
 		</p>
->>>>>>> 62a0401cc6dfa783b5fac0b788b6ffb19eae5624
 
 		</div>
 

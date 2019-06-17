@@ -17,7 +17,7 @@
 				<div class="form-group">
 					<label for="Username">Username (username berdasarkan nomor induk)</label>
 					<select class="form-control" name="username">                      
-						<option>Silahkan Pilih Siswa</option>
+						<option>Silahkan Pilih Santri</option>
 						<?php foreach( $santri as $s) :?>
 							<option value="<?php echo $s->NO_INDUK ?>"><?php echo $s->NAMA_SISWA ?></option>
 						<?php endforeach; ?>			          
