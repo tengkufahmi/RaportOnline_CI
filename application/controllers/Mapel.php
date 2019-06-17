@@ -15,4 +15,13 @@ class Mapel extends CI_Controller{
 		$data["mapel"] = $this->m_mapel->getAll();
 		$this->load->view('data-mapel', $data);
 	}
+
+	public function delete($id=null)
+	{
+		if (!isset($id)) show_404();
+
+		if ($this->m_mapel->delete($id)) {
+			redirect(site_url('Mapel'));
+		}
+ }
 }

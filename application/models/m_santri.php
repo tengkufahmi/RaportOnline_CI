@@ -25,6 +25,11 @@ class m_Santri extends CI_Model
     return $this->db->get_where($this->_table, ["id_kelas" => $id])->result();
   }
 
+  public function delete($id)
+  {
+    return $this->db->delete('guru', array("id_guru" => $id));
+  }
+
   public function get_by_class($id)
   {
     $this->db->select('*');

@@ -33,6 +33,11 @@ class m_Nilai extends CI_Model
     return $this->db->get_where($this->_table, ["no_induk" => $id])->row();
   }
 
+  public function delete($id)
+  {
+    return $this->db->delete('nilai', array("id_nilai" => $id));
+  }
+
   public function get_by_class($mapel)
   {
     $this->db->select('*');

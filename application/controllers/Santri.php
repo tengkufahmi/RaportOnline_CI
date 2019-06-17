@@ -24,6 +24,13 @@ class Santri extends CI_Controller{
 	}
 
 	
+public function delete($id=null)
+	{
+		if (!isset($id)) show_404();
 
+		if ($this->m_santri->delete($id)) {
+			redirect(site_url('Santri'));
+		}
 	
+}
 }

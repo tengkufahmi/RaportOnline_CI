@@ -40,7 +40,7 @@
 									<td><?php echo $mpl->MAPEL ?></td>
 									<td>
 										<a href="<?php echo base_url('Edit/Mapel') ?>" class="btn btn-info" >Ubah</a>
-										<a href="" class="btn btn-danger" >Hapus</a>
+										<a onclick="return confirm ('Data Akan dihapus?')" href="<?php echo site_url('Mapel/delete/'.$mpl->KD_MAPEL) ?>" class="btn btn-danger" >Hapus</a>
 									</td>
 
 								</tr>

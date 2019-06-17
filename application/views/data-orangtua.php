@@ -45,7 +45,7 @@
 							<td><?php echo $ortu->NO_HP_ORTU ?></td>
 							<td>
 								<a href="<?php echo base_url('Edit/Orang') ?>" class="btn btn-info" >Ubah</a>
-								<a href="" class="btn btn-danger" >Hapus</a>
+								<a onclick="return confirm ('Data Akan dihapus?')" href="<?php echo site_url('Orang/delete/'.$ortu->NO_INDUK) ?>" class="btn btn-danger" >Hapus</a>
 							</td>
 						</tr>
 						       

@@ -18,6 +18,10 @@ class m_mapel extends CI_Model
 		$this->mapel = $post["nama"];
 		$this->db->insert('mapel', $this);
 	}
-
+  
+  public function delete($id)
+  {
+    return $this->db->delete('mapel', array("kd_mapel" => $id));
+  }
 
 }

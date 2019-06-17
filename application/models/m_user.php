@@ -73,5 +73,9 @@ class m_user extends CI_Model
 		$update_wali = $this->db->update('orang_tua');				
 	}
 
+	public function delete($id)
+	{
+		return $this->db->delete('user', array("id_user" => $id));
+	}
 
 }

@@ -30,5 +30,10 @@ class m_orangtua extends CI_Model
         return $this->db->get_where($this->_table, ["id_ortu" => $id])->row();
     }
 
+    public function delete($id)
+    {
+         return $this->db->delete('orang_tua', array("id_ortu" => $id));
+  }
+
     
 }

@@ -15,4 +15,13 @@ class User extends CI_Controller{
 		$data["user"] = $this->m_user->getAll();
 		$this->load->view('data-user', $data);
 	}
+
+	public function delete($id=null)
+	{
+		if (!isset($id)) show_404();
+
+		if ($this->m_user->delete($id)) {
+			redirect(site_url('User'));
+		}
+}
 }
