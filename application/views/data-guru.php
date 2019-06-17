@@ -34,25 +34,25 @@
 								<th>Aksi</th>                  
 							</tr>
 						</thead>
-<?php foreach($guru as $gr) : ?>
-						<tbody>
+						<?php foreach($guru as $gr) : ?>
+							<tbody>
 
-							<tr>
-								<td><?php echo $gr->ID_GURU ?></td>
-								<td><?php echo $gr->NAMA_GURU ?></td>
-								<td><?php echo $gr->TGL_LAHIR_GURU ?></td>
-								<td><?php echo $gr->NO_HP_GURU ?></td>
-								<td><?php echo $gr->EMAIL_GURU ?></td>
-								<td>
-									<a href="<?php echo base_url('Edit/Guru') ?>" class="btn btn-info" >Ubah</a>
-									<a onclick="return confirm ('Data Akan dihapus?')" href="<?php echo site_url('Guru/delete/'.$gr->ID_GURU) ?>" class="btn btn-danger" >Hapus</a>
-								</td>
+								<tr>
+									<td><?php echo $gr->ID_GURU ?></td>
+									<td><?php echo $gr->NAMA_GURU ?></td>
+									<td><?php echo $gr->TGL_LAHIR_GURU ?></td>
+									<td><?php echo $gr->NO_HP_GURU ?></td>
+									<td><?php echo $gr->EMAIL_GURU ?></td>
+									<td>
+										<a href="<?php echo base_url('Edit/Guru/edit/'.$gr->ID_GURU) ?>" class="btn btn-info" >Ubah</a>
+										<a onclick="return confirm ('Data Akan dihapus?')" href="<?php echo site_url('Guru/delete/'.$gr->ID_GURU) ?>" class="btn btn-danger" >Hapus</a>
+									</td>
 
 
-							</tr>
+								</tr>
 
-						</tbody>
-					<?php endforeach; ?>
+							</tbody>
+						<?php endforeach; ?>
 					</table>
 				</div>
 			</div>

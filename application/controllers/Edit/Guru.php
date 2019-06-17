@@ -11,16 +11,37 @@ class Guru extends CI_Controller{
 		}
 	}
  
-	function index(){
-		$data["guru"] = $this->m_guru->getAll();
-		$this->load->view('edit-guru', $data);
+	public function index(){		
+		$this->load->view('Edit/guru');
+	}
+	
+
+	public function edit($id){
+		$where = array('id_guru' => $id);
+		$data['guru'] = $this->m_guru->edit_data($where,'guru')->result();
+		$this->load->view('edit/guru',$data);
 	}
 
-	function update()
-	{
-		$info = $this->m_guru;
-		$info->save();
-		echo "<script>alert('Data berhasil disimpan.')</script>";	
-		redirect(base_url('Guru'));
+	public function update(){
+		$post = $this->input->post();
+		$id = $post["id"];
+		$nama = $post["nama"];
+		$tanggal = $post["tgl"];
+		$nomor = $post["nomor"];
+		$email = $post["email"];
+
+		$data = array(
+			'nama_guru' => $nama,
+			'tgl_lahir_guru' => $tanggal,
+			'no_hp_guru' => $nomor,
+			'email_guru' => $email
+		);
+
+		$where = array(
+			'id_guru' => $id
+		);
+
+		$this->m_guru->update_data($where, $data, 'guru');
+		redirect('Guru');
 	}
 }
