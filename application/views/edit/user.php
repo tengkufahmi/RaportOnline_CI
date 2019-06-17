@@ -3,53 +3,44 @@
 <?php $this->load->view("partial/head.php") ?>
 <div class="container-fluid">
 
-            <!-- Breadcrumbs-->
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="admin">Home</a>
-              </li>
-              <li class="breadcrumb-item active">Tables</li>
-            </ol>
-            <form method="POST" action="input_user2" enctype="multipart/form-data" class="col-md-12">
-              <div class="row">
-                <div class="col-md-4">                
-                  
-                  <div class="form-group">
-                    <label for="Username">Username (username berdasarkan nomor induk)</label>
-                    <select class="form-control" name="username">                      
-                        <option>Silahkan Pilih Siswa</option>           
-                      </select>
-                  </div>
-                 
-                  <div class="form-group">
-                    <label for="Password Orang Tua">Password</label>
-                    <input value=""  type="text" class="form-control" name="wali">
-                  </div>                   
-        
-                   <div class="form-group">
-                    <label for="Password Orang Tua">Akses</label>
-                    <input value=""  type="text" class="form-control" name="hp">
-                  </div> 
-                </div>
-              </div>
+  <!-- Breadcrumbs-->
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href="admin">Home</a>
+    </li>
+    <li class="breadcrumb-item active">Tables</li>
+  </ol>
+<?php foreach($user as $row):?>
+    <form method="POST" action="<?php echo site_url('Edit/User/update') ?>" enctype="multipart/form-data" class="col-md-12">
+      <div class="row">
+        <div class="col-md-4">                
+          <input type="hidden" name="id" value="<?php echo $row->ID_USER ?>">
+          <div class="form-group">
+            <label for="Username">Username : </label>
+            <b>
+              <?php echo $row->USERNAME ?>
+            </b>
 
-              <div class="card-footer small text-mutedtext-center">
-                <?php 
-                if(isset($_GET['ubah'])){
-                 echo "<button type='submit' name='ubah' class='btn btn-warning col-md-2 col-xs-12'>Ubah</button>";
-               } 
-               else {
-                 echo "<button name='simpan perubahan' type='submit' class='btn btn-primary col-md-2 col-xs-12'>Simpan Perubahan</button> ";
-               }
-               ?>
-             </div>
-
-           </form>
-           <p class="small text-center text-muted m    y-5">
-            <em></em>
-          </p>
-
+          </div>
+          <div class="form-group">
+            <label for="Password Orang Tua">Password</label>
+            <input value="<?php echo $row->PASSWORD ?>"  type="text" class="form-control" name="password">
+          </div>
         </div>
+      </div>
+<?php endforeach;?>
+      <div class="card-footer small text-mutedtext-center">
+        <button name='simpan perubahan' type='submit' class='btn btn-primary col-md-2 col-xs-12'>Simpan Perubahan</button>
+      </div>
 
-<?php $this->load->view("partial/foot.php") ?>
-</html>
+    </form>
+
+    <p class="small text-center text-muted m    y-5">
+      <em></em>
+    </p>
+
+  </div>
+  <!-- /.container-fluid -->
+
+  <?php $this->load->view("partial/foot.php") ?>
+  </html>

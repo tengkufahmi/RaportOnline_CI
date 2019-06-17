@@ -23,11 +23,5 @@ class Guru extends CI_Controller{
 		if ($this->m_guru->delete($id)) {
 			redirect(site_url('Guru'));
 		}
-	}
-
-	public function edit($id){
-		$where = array('id_guru' => $id);
-		$data['guru'] = $this->m_guru->edit_data($where,'user')->result();
-		$this->load->view('edit/guru',$data);
-	}
+	}	
 }
